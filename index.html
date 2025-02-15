@@ -30,6 +30,13 @@
             font-size: 2.5em;
             font-weight: bold;
             padding: 20px;
+            position: relative;
+        }
+        .logo {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            width: 100px;
         }
         .highlight {
             color: red;
@@ -65,14 +72,22 @@
             font-weight: bold;
             border: none;
             cursor: pointer;
-            margin-top: 20px;
+            margin: 20px;
         }
         .cta:hover {
             background-color: darkred;
         }
+        .sticky-logo {
+            position: fixed;
+            top: 10px;
+            left: 10px;
+            width: 80px;
+            z-index: 1000;
+        }
     </style>
 </head>
 <body>
+    <img src="https://i.ibb.co/LdCp3dzc/logo-png.png" alt="JG TRAINING" class="sticky-logo">
     <div class="hero">
         <p>Transforma tu cuerpo con <span class="highlight">JG TRAINING</span></p>
     </div>
@@ -84,20 +99,22 @@
                 <img src="https://i.pinimg.com/736x/3f/14/f0/3f14f03ebf03ec5bc679010589fdf9c2.jpg" alt="Fuerza">
                 <h3>Entrenamiento de Fuerza</h3>
                 <p>Gana músculo, mejora tu técnica y rompe tus límites con un plan estructurado.</p>
+                <button class="cta">¡¡¡Adquirilo a precio promocional!!!</button>
             </div>
             <div class="program">
                 <img src="https://i.pinimg.com/736x/8c/e8/2c/8ce82c6bf37ce061397442fa82932155.jpg" alt="Running">
                 <h3>Entrenamiento de Running</h3>
                 <p>Aumenta tu resistencia, velocidad y desempeño con nuestro programa especializado.</p>
+                <button class="cta">¡¡¡Adquirilo a precio promocional!!!</button>
             </div>
             <div class="program">
                 <img src="https://i.pinimg.com/736x/42/17/e9/4217e971c3df3e48103b99d7de65ca8c.jpg" alt="Híbrido">
                 <h3>Entrenamiento Híbrido</h3>
                 <p>Fuerza + resistencia: el combo definitivo para un rendimiento superior.</p>
+                <button class="cta">¡¡¡Adquirilo a precio promocional!!!</button>
             </div>
         </div>
-        <button class="cta">¡Únete Ahora!</button>
+        <button class="cta">Sumate a mis programas...</button>
     </div>
 </body>
 </html>
-
