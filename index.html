@@ -23,7 +23,7 @@
             z-index: 1000;
         }
         .logo {
-            width: 250px;
+            width: 200px;
         }
         .container {
             max-width: 1200px;
@@ -31,7 +31,7 @@
             padding: 20px;
         }
         .hero {
-            background-image: url('https://i.pinimg.com/736x/ef/6f/bc/ef6fbc20f617e9c2397b1d3b530589c0.jpg'); /* Nueva imagen de portada */
+            background-image: url('https://i.pinimg.com/736x/50/dd/d8/50ddd8dcaa8a02afba4a905dab50b5b5.jpg');
             background-size: cover;
             background-position: center;
             height: 500px;
@@ -69,7 +69,7 @@
         }
         .program img {
             width: 100%;
-            height: 150px;
+            height: auto;
             object-fit: cover;
             border-radius: 10px;
         }
@@ -92,13 +92,24 @@
             background-color: orange;
         }
         .about {
-            text-align: left;
+            text-align: center;
             margin-top: 50px;
             padding: 20px;
         }
         .about img {
-            width: 150px;
+            width: 200px;
             border-radius: 50%;
+            margin-top: 20px;
+        }
+        .testimonials {
+            margin-top: 50px;
+            padding: 20px;
+            background-color: #222;
+            border-radius: 10px;
+        }
+        .testimonial {
+            margin-bottom: 20px;
+            font-style: italic;
         }
     </style>
     <script>
@@ -111,22 +122,23 @@
 <body>
     <div class="header">
         <img src="https://i.ibb.co/LdCp3dzc/logo-png.png" alt="JG TRAINING" class="logo">
-        <p class="highlight">¡Animate al cambio!</p>
     </div>
-    <div class="hero"></div>
+    <div class="hero">
+        <p>Transforma tu cuerpo con <span class="highlight">JG TRAINING</span></p>
+    </div>
     <div class="offer">¡35% de DESCUENTO en el PRIMER MES de lanzamiento!</div>
     <div class="container">
         <h2>Elige tu camino</h2>
         <div class="programs">
             <div class="program" onclick="toggleContent('strength')">
-                <img src="https://i.pinimg.com/736x/99/d7/14/99d714fd5225bfc04e172f2cd9cc7ecf.jpg" alt="Fuerza">
+                <img src="https://i.pinimg.com/736x/6d/5c/9c/6d5c9c4ecfc0550c439ff120ed16ad57.jpg" alt="Fuerza">
                 <h3>Entrenamiento de Fuerza Híbrida</h3>
                 <div id="strength" class="program-content">
                     <p>Gana músculo, mejora tu técnica y combina fuerza con resistencia. Incluye ejercicios específicos para potenciar tu rendimiento.</p>
                 </div>
             </div>
             <div class="program" onclick="toggleContent('running')">
-                <img src="https://i.pinimg.com/736x/b4/0c/33/b40c331091031c21519bb93e1e410893.jpg" alt="Running">
+                <img src="https://i.pinimg.com/736x/e2/37/96/e23796327801dcd0e9749348642d8484.jpg" alt="Running">
                 <h3>Entrenamiento de Running</h3>
                 <div id="running" class="program-content">
                     <p>Aumenta tu resistencia, velocidad y desempeño con un plan estructurado basado en ciencia del deporte.</p>
@@ -137,10 +149,16 @@
     </div>
     <div class="about">
         <h2>¿Quién soy?</h2>
+        <p>Soy <strong>Jonatan</strong>, Profesor de Educación Física con más de <strong>10 años de experiencia</strong> y <strong>15 años compitiendo</strong> en atletismo, triatlón, ciclismo y boxeo. 
+           Mi objetivo es ayudar a quienes no se sienten realmente acompañados en su proceso de entrenamiento. 
+           Mi sistema incluye <strong>test de nivel y condición física</strong>, facilitando una guía personalizada para que aprendas a entrenar de forma efectiva y segura.</p>
         <img src="https://i.ibb.co/XxY8N0Pr/IMAGEN-PELADA.jpg" alt="Jonatan">
-        <p>Soy <strong>Jonatan</strong>, Profesor de Educación Física, Doctor en Entrenamiento Físico y Alto Rendimiento, con más de <strong>10 años de experiencia entrenando alumnos</strong> y <strong>15 años compitiendo en deportes como atletismo, triatlón, ciclismo y boxeo</strong>. Además, me especializo en <strong>marketing digital y coaching deportivo</strong>, lo que me permite ofrecer un enfoque integral para tu entrenamiento.</p>
-        <p>Mi misión es guiarte para que consigas tu mejor versión física, como así también mejorar tu rendimiento en el gimnasio y en competencias. Trabajo con planes personalizados que combinan ciencia del entrenamiento, tecnología y experiencia práctica.</p>
-        <p>Si buscas un cambio real, con seguimiento, planificación y motivación, <strong>JG TRAINING es para vos</strong>. ¡Sumate a nuestra comunidad y empezá a evolucionar!</p>
+    </div>
+    <div class="testimonials">
+        <h2>Testimonios</h2>
+        <div class="testimonial">"Desde que entreno con Jonatan, mi fuerza y resistencia han mejorado drásticamente. ¡Totalmente recomendado!" - Ana G.</div>
+        <div class="testimonial">"Nunca había sentido un plan tan personalizado. Los test de nivel realmente me ayudaron a progresar rápido." - Carlos M.</div>
+        <div class="testimonial">"El mejor entrenamiento que he probado. Me siento acompañado en todo momento y sé que avanzo con un propósito." - Sofía L.</div>
     </div>
 </body>
 </html>
