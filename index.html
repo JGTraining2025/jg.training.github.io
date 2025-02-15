@@ -23,7 +23,7 @@
             z-index: 1000;
         }
         .logo {
-            width: 200px;
+            width: 250px;
         }
         .container {
             max-width: 1200px;
@@ -31,7 +31,7 @@
             padding: 20px;
         }
         .hero {
-            background-image: url('https://i.pinimg.com/736x/50/dd/d8/50ddd8dcaa8a02afba4a905dab50b5b5.jpg');
+            background-image: url('https://i.pinimg.com/736x/ef/6f/bc/ef6fbc20f617e9c2397b1d3b530589c0.jpg'); /* Nueva imagen de portada */
             background-size: cover;
             background-position: center;
             height: 500px;
@@ -55,8 +55,8 @@
         }
         .programs {
             display: flex;
+            justify-content: space-around;
             flex-wrap: wrap;
-            justify-content: center;
             margin: 40px 0;
         }
         .program {
@@ -65,109 +65,82 @@
             background-color: #222;
             margin: 10px;
             border-radius: 10px;
+            cursor: pointer;
         }
         .program img {
             width: 100%;
+            height: 150px;
+            object-fit: cover;
             border-radius: 10px;
         }
-        .accordion {
-            background-color: #444;
-            color: white;
-            cursor: pointer;
-            padding: 15px;
-            width: 100%;
-            text-align: left;
-            border: none;
-            outline: none;
-            transition: 0.4s;
-        }
-        .active, .accordion:hover {
-            background-color: red;
-        }
-        .panel {
-            padding: 0 15px;
+        .program-content {
             display: none;
-            background-color: #333;
-            overflow: hidden;
+            margin-top: 10px;
         }
         .cta {
-            background-color: red;
-            color: white;
+            background-color: yellow;
+            color: black;
             padding: 15px 30px;
             font-size: 1.2em;
             font-weight: bold;
             border: none;
             cursor: pointer;
             margin: 20px;
+            border-radius: 5px;
         }
         .cta:hover {
-            background-color: darkred;
+            background-color: orange;
         }
         .about {
             text-align: left;
-            max-width: 800px;
-            margin: 40px auto;
+            margin-top: 50px;
             padding: 20px;
-            background: #222;
-            border-radius: 10px;
         }
         .about img {
             width: 150px;
             border-radius: 50%;
-            display: block;
-            margin: 0 auto 10px;
         }
     </style>
+    <script>
+        function toggleContent(id) {
+            var content = document.getElementById(id);
+            content.style.display = content.style.display === "none" ? "block" : "none";
+        }
+    </script>
 </head>
 <body>
     <div class="header">
         <img src="https://i.ibb.co/LdCp3dzc/logo-png.png" alt="JG TRAINING" class="logo">
+        <p class="highlight">¡Animate al cambio!</p>
     </div>
-    <div class="hero">
-        <p>Transforma tu cuerpo con <span class="highlight">JG TRAINING</span></p>
-    </div>
+    <div class="hero"></div>
     <div class="offer">¡35% de DESCUENTO en el PRIMER MES de lanzamiento!</div>
     <div class="container">
         <h2>Elige tu camino</h2>
         <div class="programs">
-            <div class="program">
+            <div class="program" onclick="toggleContent('strength')">
                 <img src="https://i.pinimg.com/736x/99/d7/14/99d714fd5225bfc04e172f2cd9cc7ecf.jpg" alt="Fuerza">
                 <h3>Entrenamiento de Fuerza Híbrida</h3>
-                <button class="accordion">Más Información</button>
-                <div class="panel">
-                    <p>Gana músculo, mejora tu técnica y combina fuerza con resistencia con un plan personalizado.</p>
+                <div id="strength" class="program-content">
+                    <p>Gana músculo, mejora tu técnica y combina fuerza con resistencia. Incluye ejercicios específicos para potenciar tu rendimiento.</p>
                 </div>
             </div>
-            <div class="program">
+            <div class="program" onclick="toggleContent('running')">
                 <img src="https://i.pinimg.com/736x/b4/0c/33/b40c331091031c21519bb93e1e410893.jpg" alt="Running">
                 <h3>Entrenamiento de Running</h3>
-                <button class="accordion">Más Información</button>
-                <div class="panel">
-                    <p>Aumenta tu resistencia, velocidad y desempeño con un enfoque progresivo y efectivo.</p>
+                <div id="running" class="program-content">
+                    <p>Aumenta tu resistencia, velocidad y desempeño con un plan estructurado basado en ciencia del deporte.</p>
                 </div>
             </div>
         </div>
-        <button class="cta">Sumate a mis programas...</button>
+        <button class="cta">¡Únete hoy y empieza a transformar tu cuerpo!</button>
     </div>
     <div class="about">
-        <img src="https://via.placeholder.com/150" alt="Tu Foto">
         <h2>¿Quién soy?</h2>
-        <p>Soy Jonatan, un apasionado del entrenamiento con más de 10 años de experiencia. Mi camino en el mundo del deporte me llevó a convertirme en entrenador para ayudarte a alcanzar tu máximo potencial.</p>
-        <p>Con mis programas, no solo mejorarás tu rendimiento, sino que transformarás tu salud y bienestar. ¡Te acompaño en cada paso!</p>
+        <img src="https://i.ibb.co/XxY8N0Pr/IMAGEN-PELADA.jpg" alt="Jonatan">
+        <p>Soy <strong>Jonatan</strong>, Profesor de Educación Física, Doctor en Entrenamiento Físico y Alto Rendimiento, con más de <strong>10 años de experiencia entrenando alumnos</strong> y <strong>15 años compitiendo en deportes como atletismo, triatlón, ciclismo y boxeo</strong>. Además, me especializo en <strong>marketing digital y coaching deportivo</strong>, lo que me permite ofrecer un enfoque integral para tu entrenamiento.</p>
+        <p>Mi misión es guiarte para que consigas tu mejor versión física, como así también mejorar tu rendimiento en el gimnasio y en competencias. Trabajo con planes personalizados que combinan ciencia del entrenamiento, tecnología y experiencia práctica.</p>
+        <p>Si buscas un cambio real, con seguimiento, planificación y motivación, <strong>JG TRAINING es para vos</strong>. ¡Sumate a nuestra comunidad y empezá a evolucionar!</p>
     </div>
-    <script>
-        var acc = document.getElementsByClassName("accordion");
-        for (var i = 0; i < acc.length; i++) {
-            acc[i].addEventListener("click", function() {
-                this.classList.toggle("active");
-                var panel = this.nextElementSibling;
-                if (panel.style.display === "block") {
-                    panel.style.display = "none";
-                } else {
-                    panel.style.display = "block";
-                }
-            });
-        }
-    </script>
 </body>
 </html>
