@@ -27,7 +27,7 @@
         }
         .container {
             max-width: 1200px;
-            margin: 100px auto 0;
+            margin: 120px auto 0;
             padding: 20px;
         }
         .hero {
@@ -54,26 +54,41 @@
             font-weight: bold;
         }
         .programs {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
             margin: 40px 0;
         }
         .program {
+            width: 45%;
+            padding: 20px;
             background-color: #222;
             margin: 10px;
             border-radius: 10px;
-            padding: 20px;
-            cursor: pointer;
         }
         .program img {
             width: 100%;
             border-radius: 10px;
         }
-        .program h3 {
-            margin: 10px 0;
+        .accordion {
+            background-color: #444;
+            color: white;
+            cursor: pointer;
+            padding: 15px;
+            width: 100%;
+            text-align: left;
+            border: none;
+            outline: none;
+            transition: 0.4s;
         }
-        .program p {
+        .active, .accordion:hover {
+            background-color: red;
+        }
+        .panel {
+            padding: 0 15px;
             display: none;
-            font-size: 1em;
-            margin-top: 10px;
+            background-color: #333;
+            overflow: hidden;
         }
         .cta {
             background-color: red;
@@ -88,17 +103,21 @@
         .cta:hover {
             background-color: darkred;
         }
-    </style>
-    <script>
-        function toggleInfo(id) {
-            var info = document.getElementById(id);
-            if (info.style.display === "none" || info.style.display === "") {
-                info.style.display = "block";
-            } else {
-                info.style.display = "none";
-            }
+        .about {
+            text-align: left;
+            max-width: 800px;
+            margin: 40px auto;
+            padding: 20px;
+            background: #222;
+            border-radius: 10px;
         }
-    </script>
+        .about img {
+            width: 150px;
+            border-radius: 50%;
+            display: block;
+            margin: 0 auto 10px;
+        }
+    </style>
 </head>
 <body>
     <div class="header">
@@ -111,19 +130,44 @@
     <div class="container">
         <h2>Elige tu camino</h2>
         <div class="programs">
-            <div class="program" onclick="toggleInfo('fuerza-info')">
+            <div class="program">
                 <img src="https://i.pinimg.com/736x/99/d7/14/99d714fd5225bfc04e172f2cd9cc7ecf.jpg" alt="Fuerza">
                 <h3>Entrenamiento de Fuerza Híbrida</h3>
-                <p id="fuerza-info">Desarrolla fuerza y resistencia con un enfoque híbrido. Nuestros programas incluyen rutinas de gimnasio, ejercicios funcionales y planificación progresiva para maximizar tu rendimiento. Además, recibirás un eBook exclusivo con estrategias avanzadas de entrenamiento.</p>
+                <button class="accordion">Más Información</button>
+                <div class="panel">
+                    <p>Gana músculo, mejora tu técnica y combina fuerza con resistencia con un plan personalizado.</p>
+                </div>
             </div>
-            <div class="program" onclick="toggleInfo('running-info')">
+            <div class="program">
                 <img src="https://i.pinimg.com/736x/b4/0c/33/b40c331091031c21519bb93e1e410893.jpg" alt="Running">
                 <h3>Entrenamiento de Running</h3>
-                <p id="running-info">Mejora tu velocidad, resistencia y técnica con planes personalizados según distancia y nivel. Nuestros programas incluyen preparación para 5K, 10K y maratón. ¡Además, obtendrás un eBook exclusivo con estrategias de entrenamiento y nutrición para corredores!</p>
+                <button class="accordion">Más Información</button>
+                <div class="panel">
+                    <p>Aumenta tu resistencia, velocidad y desempeño con un enfoque progresivo y efectivo.</p>
+                </div>
             </div>
         </div>
         <button class="cta">Sumate a mis programas...</button>
     </div>
+    <div class="about">
+        <img src="https://via.placeholder.com/150" alt="Tu Foto">
+        <h2>¿Quién soy?</h2>
+        <p>Soy Jonatan, un apasionado del entrenamiento con más de 10 años de experiencia. Mi camino en el mundo del deporte me llevó a convertirme en entrenador para ayudarte a alcanzar tu máximo potencial.</p>
+        <p>Con mis programas, no solo mejorarás tu rendimiento, sino que transformarás tu salud y bienestar. ¡Te acompaño en cada paso!</p>
+    </div>
+    <script>
+        var acc = document.getElementsByClassName("accordion");
+        for (var i = 0; i < acc.length; i++) {
+            acc[i].addEventListener("click", function() {
+                this.classList.toggle("active");
+                var panel = this.nextElementSibling;
+                if (panel.style.display === "block") {
+                    panel.style.display = "none";
+                } else {
+                    panel.style.display = "block";
+                }
+            });
+        }
+    </script>
 </body>
 </html>
-
