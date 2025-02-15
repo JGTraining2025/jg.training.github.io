@@ -23,23 +23,23 @@
             z-index: 1000;
         }
         .logo {
-            width: 150px;
+            width: 200px;
         }
         .tagline {
             color: white;
-            font-size: 1.2em;
+            font-size: 1.5em;
             margin-top: 10px;
         }
         .container {
-            max-width: 1200px;
-            margin: 120px auto 0;
+            max-width: 800px;
+            margin: 150px auto 0;
             padding: 20px;
         }
         .hero {
             background-image: url('A_powerful_and_authoritative_fitness_logo_represen.png');
             background-size: cover;
             background-position: center;
-            height: 400px;
+            height: 500px;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -58,19 +58,6 @@
             font-size: 1.5em;
             font-weight: bold;
         }
-        .faq {
-            background-color: #222;
-            padding: 20px;
-            margin-top: 30px;
-            border-radius: 10px;
-        }
-        .faq h2 {
-            color: red;
-        }
-        .faq-item {
-            text-align: left;
-            margin-bottom: 15px;
-        }
         .cta {
             background-color: yellow;
             color: black;
@@ -85,30 +72,85 @@
         .cta:hover {
             background-color: orange;
         }
+        .about {
+            text-align: center;
+            margin-top: 50px;
+            padding: 20px;
+            font-size: 16px;
+            line-height: 1.5;
+        }
+        .faq {
+            margin-top: 50px;
+            padding: 20px;
+            background-color: #222;
+            border-radius: 10px;
+            text-align: left;
+        }
+        .faq h3 {
+            color: red;
+        }
+        .contact-form {
+            margin-top: 50px;
+            padding: 20px;
+            background-color: #222;
+            border-radius: 10px;
+        }
+        .contact-form input, .contact-form textarea {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: none;
+            border-radius: 5px;
+        }
+        .contact-form button {
+            background-color: yellow;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+            font-size: 1.2em;
+        }
     </style>
 </head>
 <body>
     <div class="header">
         <img src="A_powerful_and_authoritative_fitness_logo_represen.png" alt="JG TRAINING" class="logo">
-        <p class="tagline">Cambia tu manera de entrenar, optimiza tu rendimiento</p>
+        <p class="tagline">Transforma tu cuerpo y mente. Conviértete en tu mejor versión.</p>
     </div>
     <div class="hero">
-        <p>Potencia tu entrenamiento con <span class="highlight">JG TRAINING</span></p>
+        <p>¡Alcanza tu máximo potencial con <span class="highlight">JG TRAINING</span>!</p>
     </div>
     <div class="offer">¡35% de DESCUENTO en el PRIMER MES de lanzamiento!</div>
     <div class="container">
+        <h2>¿Quién soy?</h2>
+        <p>
+            Soy <strong>Jonatan</strong>, profesor de educación física con más de <strong>10 años de experiencia</strong>. 
+            Mi pasión es ayudarte a superar límites, aumentar tu rendimiento y alcanzar tus objetivos físicos.
+        </p>
+        <p>
+            Con más de <strong>15 años de competencia</strong> en atletismo, triatlón, ciclismo y boxeo,
+            he desarrollado un método de entrenamiento único, basado en ciencia y adaptado a cada persona.
+        </p>
+        <p>
+            No importa tu nivel actual. Te acompaño en cada paso para que entrenes con propósito,
+            seguridad y resultados reales.
+        </p>
+    </div>
+    <div class="faq">
         <h2>Preguntas Frecuentes</h2>
-        <div class="faq">
-            <div class="faq-item">
-                <strong>¿Para quién es este entrenamiento?</strong>
-                <p>Para personas de todos los niveles que buscan mejorar su fuerza y resistencia.</p>
-            </div>
-            <div class="faq-item">
-                <strong>¿Cómo me inscribo?</strong>
-                <p>Haz clic en el botón de inscripción y sigue los pasos.</p>
-            </div>
-        </div>
-        <button class="cta" onclick="window.location.href='https://hotmart.com'">¡Únete hoy y empieza a transformar tu entrenamiento!</button>
+        <h3>¿Para quién es este entrenamiento?</h3>
+        <p>Para cualquier persona que quiera mejorar su fuerza, resistencia y bienestar.</p>
+        <h3>¿Necesito experiencia previa?</h3>
+        <p>No, adapto cada plan a tu nivel actual.</p>
+    </div>
+    <div class="contact-form">
+        <h2>¡Únete ahora!</h2>
+        <p>Déjame tus datos y te contactaré para comenzar tu transformación.</p>
+        <form>
+            <input type="text" placeholder="Tu Nombre" required>
+            <input type="email" placeholder="Tu Email" required>
+            <textarea placeholder="Cuéntame tu objetivo" required></textarea>
+            <button type="submit">Enviar</button>
+        </form>
     </div>
 </body>
 </html>
