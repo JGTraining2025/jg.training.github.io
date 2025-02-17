@@ -1,120 +1,90 @@
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116
+117
+118
+119
+120
+121
+122
+123
+124
+125
+126
+127
+128
+129
+130
+131
+132
+133
+134
+135
+136
+137
+138
+139
+140
+141
+142
+143
+144
+145
+146
+147
+148
+149
+150
+151
+152
+153
+154
+155
+156
+157
+158
+159
+160
+161
+162
+163
+164
+165
+166
+167
+168
+169
+170
+171
 <!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>JG TRAINING - Entrenamiento Híbrido</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #111;
-            color: #fff;
-            text-align: center;
-        }
-        .header {
-            background-color: black;
-            padding: 20px;
-            position: fixed;
-            width: 100%;
-            top: 0;
-            left: 0;
-            z-index: 1000;
-        }
-        .logo {
-            width: 200px;
-        }
-        .tagline {
-            color: white;
-            font-size: 1.2em;
-            margin-top: 10px;
-        }
-        .container {
-            max-width: 1200px;
-            margin: 120px auto 0;
             padding: 20px;
         }
-        .hero {
-            background-image: url('/mnt/data/A_powerful_and_authoritative_fitness_logo_represen.png');
-            background-size: cover;
-            background-position: center;
-            height: 500px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-transform: uppercase;
-            font-size: 2.5em;
-            font-weight: bold;
+        .about img {
+            width: 180px;
+            border-radius: 50%;
+            margin-top: 20px;
+        }
+        .testimonials {
+            margin-top: 50px;
             padding: 20px;
-            position: relative;
-        }
-        .highlight {
-            color: red;
-        }
-        .offer {
-            background-color: red;
-            padding: 15px;
-            font-size: 1.5em;
-            font-weight: bold;
-        }
-        .faq {
             background-color: #222;
-            padding: 20px;
-            margin: 40px 0;
             border-radius: 10px;
         }
-        .faq h2 {
-            color: red;
-        }
-        .faq-item {
-            margin-bottom: 10px;
-            text-align: left;
-        }
-        .faq-item h3 {
-            cursor: pointer;
-            color: yellow;
-        }
-        .faq-item p {
-            display: none;
-        }
-        .cta {
-            background-color: yellow;
-            color: black;
-            padding: 15px 30px;
-            font-size: 1.2em;
-            font-weight: bold;
-            border: none;
-            cursor: pointer;
-            margin: 20px;
-            border-radius: 5px;
-        }
-        .cta:hover {
-            background-color: orange;
-        }
-        .contact-form {
-            background-color: #222;
-            padding: 20px;
-            margin: 40px 0;
-            border-radius: 10px;
-        }
-        .contact-form input, .contact-form textarea {
-            width: 100%;
-            padding: 10px;
-            margin: 10px 0;
-            border: none;
-            border-radius: 5px;
-        }
-        .contact-form button {
-            background-color: red;
-            color: white;
-            padding: 10px;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-        }
-        .contact-form button:hover {
-            background-color: darkred;
+        .testimonial {
+            margin-bottom: 20px;
+            font-style: italic;
         }
     </style>
     <script>
@@ -126,7 +96,7 @@
 </head>
 <body>
     <div class="header">
-        <img src="/mnt/data/A_powerful_and_authoritative_fitness_logo_represen.png" alt="JG TRAINING" class="logo">
+        <img src="https://i.ibb.co/LdCp3dzc/logo-png.png" alt="JG TRAINING" class="logo">
         <p class="tagline">Cambia tu manera de entrenar, optimiza tu rendimiento</p>
     </div>
     <div class="hero">
@@ -134,27 +104,37 @@
     </div>
     <div class="offer">¡35% de DESCUENTO en el PRIMER MES de lanzamiento!</div>
     <div class="container">
-        <h2>Preguntas Frecuentes</h2>
-        <div class="faq">
-            <div class="faq-item">
-                <h3 onclick="toggleContent('faq1')">¿Cuánto dura cada sesión de entrenamiento?</h3>
-                <p id="faq1">Cada sesión dura entre 45 y 60 minutos, dependiendo del programa elegido.</p>
+        <h2>Elige tu camino</h2>
+        <div class="programs">
+            <div class="program" onclick="toggleContent('strength')">
+                <img src="https://i.pinimg.com/736x/6d/5c/9c/6d5c9c4ecfc0550c439ff120ed16ad57.jpg" alt="Fuerza">
+                <h3>Entrenamiento de Fuerza Híbrida</h3>
+                <div id="strength" class="program-content">
+                    <p>Gana músculo, mejora tu técnica y combina fuerza con resistencia. Incluye ejercicios específicos para potenciar tu rendimiento.</p>
+                </div>
             </div>
-            <div class="faq-item">
-                <h3 onclick="toggleContent('faq2')">¿Necesito equipo para entrenar?</h3>
-                <p id="faq2">No necesariamente, ofrecemos opciones con y sin equipo para adaptarnos a tus necesidades.</p>
+            <div class="program" onclick="toggleContent('running')">
+                <img src="https://i.pinimg.com/736x/e2/37/96/e23796327801dcd0e9749348642d8484.jpg" alt="Running">
+                <h3>Entrenamiento de Running</h3>
+                <div id="running" class="program-content">
+                    <p>Aumenta tu resistencia, velocidad y desempeño con un plan estructurado basado en ciencia del deporte.</p>
+                </div>
             </div>
         </div>
-        <div class="contact-form">
-            <h2>Contáctanos</h2>
-            <p>Déjanos tus datos y nos pondremos en contacto contigo.</p>
-            <form>
-                <input type="text" name="nombre" placeholder="Nombre" required>
-                <input type="email" name="email" placeholder="Correo Electrónico" required>
-                <textarea name="mensaje" placeholder="Mensaje" required></textarea>
-                <button type="submit">Enviar</button>
-            </form>
-        </div>
+        <button class="cta" onclick="window.location.href='https://hotmart.com'">¡Únete hoy y empieza a transformar tu entrenamiento!</button>
+    </div>
+    <div class="about">
+        <h2>¿Quién soy?</h2>
+        <p>Soy <strong>Jonatan</strong>, Profesor de Educación Física con más de <strong>10 años de experiencia</strong> y <strong>15 años compitiendo</strong> en atletismo, triatlón, ciclismo y boxeo. 
+           Mi objetivo es ayudar a quienes no se sienten realmente acompañados en su proceso de entrenamiento. 
+           Mi sistema incluye <strong>test de nivel y condición física</strong>, facilitando una guía personalizada para que aprendas a entrenar de forma efectiva y segura.</p>
+        <img src="https://i.ibb.co/XxY8N0Pr/IMAGEN-PELADA.jpg" alt="Jonatan">
+    </div>
+    <div class="testimonials">
+        <h2>Testimonios</h2>
+        <div class="testimonial">"Desde que entreno con Jony, mi fuerza y resistencia han mejorado mucho, hasta yo me sorprendi, realmente... Totalmente recomendado!!" - Ana G.</div>
+        <div class="testimonial">"Nunca había sentido que un plan en linea sea tan personalizado. Los test de nivel realmente me ayudaron a progresar rápido." - Carlos M.</div>
+        <div class="testimonial">"De los mejores planes de entrenamiento que he probado. Me siento acompañado en todo momento y sé que avanzo con un propósito, gracias Jony." - Sofía L.</div>
     </div>
 </body>
 </html>
