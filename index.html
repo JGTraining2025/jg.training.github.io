@@ -1,140 +1,129 @@
-102
-103
-104
-105
-106
-107
-108
-109
-110
-111
-112
-113
-114
-115
-116
-117
-118
-119
-120
-121
-122
-123
-124
-125
-126
-127
-128
-129
-130
-131
-132
-133
-134
-135
-136
-137
-138
-139
-140
-141
-142
-143
-144
-145
-146
-147
-148
-149
-150
-151
-152
-153
-154
-155
-156
-157
-158
-159
-160
-161
-162
-163
-164
-165
-166
-167
-168
-169
-170
-171
 <!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JG TRAINING - Entrenamiento Híbrido</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #111;
+            color: #fff;
+            text-align: center;
+        }
+        .header {
+            background-color: black;
+            padding: 20px;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            left: 0;
+            z-index: 1000;
+        }
+        .logo {
+            width: 200px;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 100px auto 0;
             padding: 20px;
         }
-        .about img {
-            width: 180px;
-            border-radius: 50%;
-            margin-top: 20px;
-        }
-        .testimonials {
-            margin-top: 50px;
+        .hero {
+            background-image: url('https://i.pinimg.com/736x/50/dd/d8/50ddd8dcaa8a02afba4a905dab50b5b5.jpg');
+            background-size: cover;
+            background-position: center;
+            height: 500px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-transform: uppercase;
+            font-size: 2.5em;
+            font-weight: bold;
             padding: 20px;
+            position: relative;
+        }
+        .highlight {
+            color: red;
+        }
+        .offer {
+            background-color: red;
+            padding: 15px;
+            font-size: 1.5em;
+            font-weight: bold;
+        }
+        .programs {
+            margin: 40px 0;
+        }
+        .program {
             background-color: #222;
+            margin: 10px;
+            border-radius: 10px;
+            padding: 20px;
+            cursor: pointer;
+        }
+        .program img {
+            width: 100%;
             border-radius: 10px;
         }
-        .testimonial {
-            margin-bottom: 20px;
-            font-style: italic;
+        .program h3 {
+            margin: 10px 0;
+        }
+        .program p {
+            display: none;
+            font-size: 1em;
+            margin-top: 10px;
+        }
+        .cta {
+            background-color: red;
+            color: white;
+            padding: 15px 30px;
+            font-size: 1.2em;
+            font-weight: bold;
+            border: none;
+            cursor: pointer;
+            margin: 20px;
+        }
+        .cta:hover {
+            background-color: darkred;
         }
     </style>
     <script>
-        function toggleContent(id) {
-            var content = document.getElementById(id);
-            content.style.display = content.style.display === "none" ? "block" : "none";
+        function toggleInfo(id) {
+            var info = document.getElementById(id);
+            if (info.style.display === "none" || info.style.display === "") {
+                info.style.display = "block";
+            } else {
+                info.style.display = "none";
+            }
         }
     </script>
 </head>
 <body>
     <div class="header">
         <img src="https://i.ibb.co/LdCp3dzc/logo-png.png" alt="JG TRAINING" class="logo">
-        <p class="tagline">Cambia tu manera de entrenar, optimiza tu rendimiento</p>
     </div>
     <div class="hero">
-        <p>Potencia tu entrenamiento con <span class="highlight">JG TRAINING</span></p>
+        <p>Transforma tu cuerpo con <span class="highlight">JG TRAINING</span></p>
     </div>
     <div class="offer">¡35% de DESCUENTO en el PRIMER MES de lanzamiento!</div>
     <div class="container">
         <h2>Elige tu camino</h2>
         <div class="programs">
-            <div class="program" onclick="toggleContent('strength')">
-                <img src="https://i.pinimg.com/736x/6d/5c/9c/6d5c9c4ecfc0550c439ff120ed16ad57.jpg" alt="Fuerza">
+            <div class="program" onclick="toggleInfo('fuerza-info')">
+                <img src="https://i.pinimg.com/736x/99/d7/14/99d714fd5225bfc04e172f2cd9cc7ecf.jpg" alt="Fuerza">
                 <h3>Entrenamiento de Fuerza Híbrida</h3>
-                <div id="strength" class="program-content">
-                    <p>Gana músculo, mejora tu técnica y combina fuerza con resistencia. Incluye ejercicios específicos para potenciar tu rendimiento.</p>
-                </div>
+                <p id="fuerza-info">Desarrolla fuerza y resistencia con un enfoque híbrido. Nuestros programas incluyen rutinas de gimnasio, ejercicios funcionales y planificación progresiva para maximizar tu rendimiento. Además, recibirás un eBook exclusivo con estrategias avanzadas de entrenamiento.</p>
             </div>
-            <div class="program" onclick="toggleContent('running')">
-                <img src="https://i.pinimg.com/736x/e2/37/96/e23796327801dcd0e9749348642d8484.jpg" alt="Running">
+            <div class="program" onclick="toggleInfo('running-info')">
+                <img src="https://i.pinimg.com/736x/b4/0c/33/b40c331091031c21519bb93e1e410893.jpg" alt="Running">
                 <h3>Entrenamiento de Running</h3>
-                <div id="running" class="program-content">
-                    <p>Aumenta tu resistencia, velocidad y desempeño con un plan estructurado basado en ciencia del deporte.</p>
-                </div>
+                <p id="running-info">Mejora tu velocidad, resistencia y técnica con planes personalizados según distancia y nivel. Nuestros programas incluyen preparación para 5K, 10K y maratón. ¡Además, obtendrás un eBook exclusivo con estrategias de entrenamiento y nutrición para corredores!</p>
             </div>
         </div>
-        <button class="cta" onclick="window.location.href='https://hotmart.com'">¡Únete hoy y empieza a transformar tu entrenamiento!</button>
-    </div>
-    <div class="about">
-        <h2>¿Quién soy?</h2>
-        <p>Soy <strong>Jonatan</strong>, Profesor de Educación Física con más de <strong>10 años de experiencia</strong> y <strong>15 años compitiendo</strong> en atletismo, triatlón, ciclismo y boxeo. 
-           Mi objetivo es ayudar a quienes no se sienten realmente acompañados en su proceso de entrenamiento. 
-           Mi sistema incluye <strong>test de nivel y condición física</strong>, facilitando una guía personalizada para que aprendas a entrenar de forma efectiva y segura.</p>
-        <img src="https://i.ibb.co/XxY8N0Pr/IMAGEN-PELADA.jpg" alt="Jonatan">
-    </div>
-    <div class="testimonials">
-        <h2>Testimonios</h2>
-        <div class="testimonial">"Desde que entreno con Jony, mi fuerza y resistencia han mejorado mucho, hasta yo me sorprendi, realmente... Totalmente recomendado!!" - Ana G.</div>
-        <div class="testimonial">"Nunca había sentido que un plan en linea sea tan personalizado. Los test de nivel realmente me ayudaron a progresar rápido." - Carlos M.</div>
-        <div class="testimonial">"De los mejores planes de entrenamiento que he probado. Me siento acompañado en todo momento y sé que avanzo con un propósito, gracias Jony." - Sofía L.</div>
+        <button class="cta">Sumate a mis programas...</button>
     </div>
 </body>
 </html>
+
